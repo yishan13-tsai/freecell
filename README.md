@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# freecell
 
-## Getting Started
+## TODO
 
-First, run the development server:
+- [ ] 新賽局
+- [ ] 計分
+- [ ] 時間限制
+- [ ] 提示
+- [ ] 悔棋
+- [ ] 記錄
+- [ ] 分享
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## rules
+將一副標準52張撲克牌洗牌，再分別置於8個欄目，其中4個欄目有7張紙牌，其餘4個欄目有6張紙牌，每張撲克牌皆要以翻開顯示。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+另外還有右上角四個本位欄框、左上角四個空白欄框。紙牌 A、2 可立即放到本位欄框，而其他同花色的牌則可以由小到大依序疊上去。只要將所有的牌都放到本位欄框中，就成功了。空白欄框為四個放牌位置。每個欄框都可任意放一張紙牌。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+移動紙牌的規則如下：
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+將紙牌移動到某一欄時的順序必須為由大到小，而且是不同的顏色（即黑、紅兩種顏色）。
+將紙牌移至本位欄框時，必須以相同花色，將牌按照從低（A）到高（K）的順序移動。
+某欄最底端的紙牌可移到空白欄框、另一欄的最底端或本位欄框。
+空白欄框中的紙牌可移至某一欄的最底端或本位欄框。
+將一副標準52張撲克牌洗牌，再分別置於8個欄目，其中4個欄目有7張紙牌，其餘4個欄目有6張紙牌，每張撲克牌皆要以翻開顯示。
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+另外還有右上角四個本位欄框、左上角四個空白欄框。紙牌 A、2 可立即放到本位欄框，而其他同花色的牌則可以由小到大依序疊上去。只要將所有的牌都放到本位欄框中，就成功了。空白欄框為四個放牌位置。每個欄框都可任意放一張紙牌。

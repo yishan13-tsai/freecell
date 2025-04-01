@@ -1,0 +1,43 @@
+.stack-container {
+  position: relative;
+  width: 100px;
+  height: 400px; /* 根據卡片數量與堆疊程度調整 */
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: grab;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* 透過 nth-child 控制卡片疊層位置 */
+.stack-container .card:nth-child(n) {
+  top: calc((var(--index, 0) * 30px));
+}
+
+.stack-container .card:nth-child(1) { --index: 0; }
+.stack-container .card:nth-child(2) { --index: 1; }
+.stack-container .card:nth-child(3) { --index: 2; }
+.stack-container .card:nth-child(4) { --index: 3; }
+.stack-container .card:nth-child(5) { --index: 4; }
+.stack-container .card:nth-child(6) { --index: 5; }
+.stack-container .card:nth-child(7) { --index: 6; }
+.stack-container .card:nth-child(8) { --index: 7; }
+
+
+.card:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
